@@ -1,0 +1,2 @@
+İlker umut,umut,123-Computer Architecture,Data Organization and Management
+Gökhan Göksel Elpeze,goksel,goksel-Data Organization and Management,Algorithm Analysis,Computer Architecture,Numerical Analysis,Object Oriented Analysis and Design,Concepts of Programming Languages

@@ -1,0 +1,7 @@
+CME2202,Data Organization and Management,adil
+CME2204,Algorithm Analysis,zerrin
+CME2206,Computer Architecture,şerife
+CME2208,Numerical Analysis,atakan
+CME2210,Object Oriented Analysis and Design,semih
+CME3202,Concepts of Programming Languages,gökhan
+CME2300,NEW course,gökhan
