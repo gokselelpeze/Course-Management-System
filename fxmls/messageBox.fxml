@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1080.0" style="-fx-background-color: #253044;" stylesheets="@../styles/dark-theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MessageBoxController">
+   <children>
+      <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ListView fx:id="userListView" prefHeight="632.0" prefWidth="300.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="130.0">
+               <styleClass>
+                  <String fx:value="list-cell" />
+                  <String fx:value="box-tf" />
+               </styleClass></ListView>
+            <TextField fx:id="searchUser" layoutX="85.0" layoutY="43.0" prefHeight="60.0" prefWidth="300.0" promptText="Search.." styleClass="box-tf" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="lblName" alignment="CENTER" contentDisplay="CENTER" layoutX="512.0" layoutY="53.0" textFill="#0080ff" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="30.0">
+         <font>
+            <Font size="34.0" />
+         </font></Label>
+      <ScrollPane fitToWidth="true" focusTraversable="false" hbarPolicy="NEVER" layoutX="70.0" layoutY="120.0" pannable="true" style="-fx-background-color: #253044;" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="100.0">
+         <content>
+            <VBox fx:id="boxMessages" alignment="TOP_CENTER" spacing="10.0" style="-fx-background-color: #253044;" />
+         </content>
+      </ScrollPane>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="76.0" prefWidth="440.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="40.0">
+         <children>
+            <ImageView fx:id="imgUser" fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../img/monkey.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txtComment" layoutX="64.0" styleClass="box-tf" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="0.0" />
+            <JFXButton fx:id="btnPost" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" ellipsisString="" focusTraversable="false" graphicTextGap="10.0" layoutX="395.0" onAction="#sendMessage" styleClass="home-buttons" textFill="#5ed6d4" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <graphic>
+                  <FontAwesomeIconView fill="#5ed6d4" glyphName="SEND" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

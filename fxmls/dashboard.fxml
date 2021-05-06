@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" stylesheets="@../styles/dark-theme.css"
+            xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controllers.DashboardController">
+    <children>
+        <AnchorPane fx:id="pnlAddCourse" prefHeight="640.0" prefWidth="1080.0" style="-fx-background-color: #253044;"
+                    AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                    AnchorPane.topAnchor="0.0">
+            <children>
+                <JFXButton contentDisplay="GRAPHIC_ONLY" onAction="#backToCourses" AnchorPane.leftAnchor="40.0"
+                           AnchorPane.topAnchor="50.0">
+                    <graphic>
+                        <FontAwesomeIconView fill="#c9bcbc" glyphName="CHEVRON_LEFT" size="40"/>
+                    </graphic>
+                </JFXButton>
+                <AnchorPane layoutX="111.0" layoutY="138.0" prefHeight="200.0" prefWidth="200.0"
+                            AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0"
+                            AnchorPane.topAnchor="100.0">
+                    <children>
+                        <Label layoutX="100.0" layoutY="16.0" text="Course ID: " textFill="#395aff"
+                               AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="100.0">
+                            <font>
+                                <Font size="24.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="100.0" layoutY="16.0" text="Course Name: " textFill="#395aff"
+                               AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="180.0">
+                            <font>
+                                <Font size="24.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="100.0" layoutY="16.0" text="Lesson Time:" textFill="#395aff"
+                               AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="260.0">
+                            <font>
+                                <Font size="24.0"/>
+                            </font>
+                        </Label>
+                        <JFXTextField fx:id="txtCourseID" layoutX="244.0" layoutY="105.0" prefHeight="25.0"
+                                      prefWidth="300.0" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="80.0"/>
+                        <JFXTextField fx:id="txtCourseName" layoutX="254.0" layoutY="180.0" prefHeight="25.0"
+                                      prefWidth="300.0" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="160.0"/>
+                        <JFXTimePicker fx:id="txtLessonTime" layoutX="260.0" layoutY="265.0" prefWidth="300.0"
+                                       AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="240.0"/>
+                        <JFXButton fx:id="btnAddCourseToSystem" alignment="CENTER" ellipsisString=""
+                                   focusTraversable="false" graphicTextGap="10.0" layoutX="730.0" layoutY="371.0"
+                                   onAction="#addCourseToSystem" styleClass="home-buttons" text="ADD" textFill="#5ed6d4"
+                                   wrapText="true" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="150.0"/>
+                    </children>
+                </AnchorPane>
+                <Label alignment="CENTER" layoutX="476.0" layoutY="33.0" text="NEW COURSE" textFill="#395aff"
+                       AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="45.0">
+                    <font>
+                        <Font size="36.0"/>
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="pnlCourses" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity" prefHeight="650.0" prefWidth="1090.0" style="-fx-background-color: #253044;"
+                    AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                    AnchorPane.topAnchor="0.0">
+            <children>
+                <ScrollPane fitToWidth="true" focusTraversable="false" hbarPolicy="NEVER" layoutX="60.0" layoutY="110.0"
+                            pannable="true" style="-fx-background-color: #253044;" AnchorPane.bottomAnchor="30.0"
+                            AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="80.0">
+                    <content>
+                        <VBox fx:id="boxCourses" alignment="TOP_CENTER" style="-fx-background-color: #253044;"/>
+                    </content>
+                </ScrollPane>
+                <JFXButton fx:id="btnAddCourse" alignment="CENTER" ellipsisString="" focusTraversable="false"
+                           graphicTextGap="10.0" layoutX="457.0" layoutY="30.0" onAction="#addCourse"
+                           styleClass="home-buttons" text="ADD COURSE" textFill="#5ed6d4" wrapText="true"
+                           AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="20.0">
+                    <graphic>
+                        <FontAwesomeIconView fill="#5ed6d4" glyphName="PLUS" size="20" textAlignment="CENTER"/>
+                    </graphic>
+                </JFXButton>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

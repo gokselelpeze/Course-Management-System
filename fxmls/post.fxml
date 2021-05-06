@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchor" stylesheets="@../styles/dark-theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PostController">
+    <children>
+      <StackPane fx:id="stackPane" prefHeight="341.0" prefWidth="549.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane fx:id="post" layoutX="21.0" layoutY="21.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+         <children>
+              <VBox alignment="CENTER" layoutX="9.0" layoutY="9.0" prefHeight="290.0" prefWidth="489.0" styleClass="box-tf" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <children>
+                      <HBox alignment="CENTER">
+                          <VBox.margin>
+                              <Insets />
+                          </VBox.margin>
+                          <children>
+                              <VBox spacing="20.0" styleClass="list-cell">
+                                  <children>
+                                      <HBox spacing="20.0">
+                                          <children>
+                                              <ImageView fx:id="imgAuthor" fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                                  <image>
+                                                      <Image url="@../img/monkey.png" />
+                                                  </image>
+                                              </ImageView>
+                                              <VBox>
+                                                  <children>
+                                                      <Text fx:id="txtAuthor" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="main-text" text="#Author" />
+                                                      <Text fx:id="txtDate" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="main-text" text="#Date" />
+                                                  </children>
+                                              </VBox>
+                                    <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <JFXButton fx:id="btnEditPost" alignment="CENTER" ellipsisString="" focusTraversable="false" graphicTextGap="10.0" onAction="#editPost" styleClass="home-buttons" text="EDIT" textFill="#5ed6d4" wrapText="true" HBox.hgrow="ALWAYS">
+                                             <graphic>
+                                                <FontAwesomeIconView fill="#5ed6d4" glyphName="EDIT" size="20" textAlignment="CENTER" />
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnDeletePost" alignment="CENTER" ellipsisString="" focusTraversable="false" graphicTextGap="10.0" onAction="#deletePost" styleClass="home-buttons" text="DELETE" textFill="#5ed6d4" wrapText="true" HBox.hgrow="ALWAYS">
+                                             <graphic>
+                                                <FontAwesomeIconView fill="#5ed6d4" glyphName="REMOVE" size="20" textAlignment="CENTER" />
+                                             </graphic>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                          </children>
+                                      </HBox>
+                                      <HBox fx:id="hbox" prefHeight="100.0" prefWidth="200.0">
+                                          <children>
+                                              <Text fx:id="txtContent" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="post-text" text="#Content" />
+                                          </children>
+                                      </HBox>
+                                      <Separator prefWidth="200.0" />
+                                      <VBox fx:id="boxComments" prefHeight="200.0" prefWidth="100.0">
+                                          <opaqueInsets>
+                                              <Insets />
+                                          </opaqueInsets>
+                                      </VBox>
+                                      <AnchorPane prefHeight="76.0" prefWidth="440.0">
+                                          <children>
+                                              <ImageView fx:id="imgUser" fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <image>
+                                                      <Image url="@../img/monkey.png" />
+                                                  </image>
+                                              </ImageView>
+                                              <TextField fx:id="txtComment" layoutX="64.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="0.0" />
+                                              <JFXButton fx:id="btnPost" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" ellipsisString="" focusTraversable="false" graphicTextGap="10.0" layoutX="395.0" onAction="#postComment" styleClass="home-buttons" textFill="#5ed6d4" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <graphic>
+                                                      <FontAwesomeIconView fill="#5ed6d4" glyphName="SEND" />
+                                                  </graphic>
+                                              </JFXButton>
+                                          </children>
+                                      </AnchorPane>
+                                  </children>
+                                  <effect>
+                                      <DropShadow />
+                                  </effect>
+                                  <padding>
+                                      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                  </padding>
+                              </VBox>
+                          </children>
+                      </HBox>
+                  </children>
+              </VBox>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,57 @@
+* {
+    -fx-primary:   #37a8e1;
+    -fx-secondary: #5ed6d4;
+}
+.menu_click {
+    -fx-border-color: -fx-primary;
+    -fx-border-width: 0px 0px 0px 4px;
+    -fx-background-color: #eeeeee;
+}
+
+.hover_border:hover {
+    -fx-border-color: -fx-primary;
+    -fx-border-width: 0px 0px 0px 4px;
+    -fx-background-color: #eeeeee;
+    -fx-cursor: hand;
+}
+
+.hover_border_profile:hover {
+    -fx-border-color: -fx-primary;
+    -fx-border-width: 0px 4px 0px 4px;
+    -fx-background-color: #eeeeee;
+    -fx-cursor: hand;
+}
+.cursor-hand {
+    -fx-cursor: hand;
+}
+
+.H1 {
+    -fx-font-family: Quicksand;
+    -fx-font-size: 1.5em;
+    -fx-fill: -fx-primary;
+}
+
+.text {
+    -fx-font-family: Quicksand;
+    -fx-font-size: 1.3em;
+    -fx-fill: -fx-primary;
+}
+
+.icon {
+    -fx-background-color: WHITE;
+    -fx-background-radius: 0px;
+}
+.scroll-pane > .viewport {
+   -fx-background-color: transparent;
+}
+.scroll-pane {
+   -fx-background-color: transparent;
+}
+
+.linear-grad {
+    -fx-background-color: linear-gradient(to top left,  #111B29, derive( #253044, 30%));
+}
+.linear-grad2 {
+    -fx-background-color: linear-gradient(to top right,  #111B29, derive( #253044, 20%));
+}
+
